@@ -1,0 +1,36 @@
+print("\n")
+votoA = [int(input ("Scrivi il primo voto ")),int(input ("Scrivi il secondo voto ")), int(input ("Scrivi il terzo voto "))]
+print("\n")
+print("B inserisci i tuoi voti")
+print("\n")
+votoB = [int(input ("Scrivi il primo voto ")),int(input ("Scrivi il secondo voto ")), int(input ("Scrivi il terzo voto "))]
+
+print("\n")
+mediaA = sum(votoA) // 3
+mediaB = sum(votoB) // 3
+
+
+print("La media di A è:", mediaA, "La Media di B è:", mediaB)
+
+def vincitore(mediaA, mediaB):
+
+    if mediaA < mediaB:
+        print("A hai perso")
+    elif mediaA > mediaB:
+        print("A hai vinto")
+    else:
+        print("Smettete di copiare")
+
+def calcoloSuff(mediaA, mediaB):
+    if mediaA < 6 and mediaB < 6:
+        print("A e B siete insufficienti")
+    elif mediaA >= 6 and mediaB >=6:
+        print("A e B siete sufficienti")
+    elif mediaA < 6 and mediaB >= 6: 
+        print("A sei insuff B sei suff")
+    elif mediaA >= 6 and mediaB < 6:
+        print("A sei suff B sei insuff")
+    
+vincitore(mediaA, mediaB)
+calcoloSuff(mediaA, mediaB)
+    
